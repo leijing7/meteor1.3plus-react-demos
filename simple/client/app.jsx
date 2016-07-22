@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CountContainer from './count.jsx';
 
-// App 组件 - 代表整个页面。
+// App 组件 - 代表整个页面
 // 这个是一个简单的 app，所以没有使用 router，真正的单个页面
 export default class App extends Component {
   //构造函数，被 import 时自动执行
