@@ -67,7 +67,7 @@ Meteor.methods({
 
     const task = Tasks.findOne(taskId);
     if (task.private && task.owner !== this.userId) {
-      // If the task is private, make sure only the owner can delete it
+      // 只有任务的创建者才能删除私有任务
       throw new Meteor.Error('not-authorized');
     }
 

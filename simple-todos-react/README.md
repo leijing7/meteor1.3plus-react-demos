@@ -60,7 +60,7 @@ autopublish 也只是方便大家起步的，它会同步数据库所有内容�
 meteor npm install --save classnames
 ```
 
-这个包解决 JSX 的 style className 拼接的问题
+这个包解决 JSX 的 className 拼接的问题
 
 
 ## 代码解释
@@ -76,5 +76,3 @@ package.json          # npm 包的管理信息；npm 命令的配置文件
 在运行之前，你需要运行 <code> meteor npm install </code>。这一步是为了安装 meteor 使用到的 npm 包。然后运行 <code> meteor </code>。首次运行会比较慢，速度取决你的网速（建议科学上网）因为需要下载 meteor 的核心包。
 
 下载结束并运行起来后，在浏览器里输入 http://localhost:3000 你就可以看到你的网站了。
-
-![screenshot](screenshot.png)
