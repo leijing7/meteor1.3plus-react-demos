@@ -26,7 +26,7 @@ export default class Result extends React.Component{
     const dist = Number(this.props.dist)
     const speed = Number(this.props.speed)
     const minutes = Math.round(dist / speed * 60)
-    const diff = 1.3*dist + 0.3*minutes - 10 - (1.7*dist + 0.35*minutes - 15)
+    let diff = 1.3*dist + 0.3*minutes - 10 - (1.7*dist + 0.35*minutes - 15)
 
     let deal = "same"
     if (diff > 0) {
@@ -34,6 +34,7 @@ export default class Result extends React.Component{
     }
     if (diff < 0) {
       deal = "滴滴"
+      diff = Math.abs(diff)
     }
     return <ResultView {...{deal, diff, ...this.props}} />
   }
