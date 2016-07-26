@@ -26,7 +26,7 @@ export default class Task extends Component {
     });
 
     return (
-      <li className={taskClassName}>
+      <li className={taskClassName} onClick={this.props.itemClicked.bind(this, this.props.task.text)}>
         <button className="delete" onClick={this.deleteThisTask.bind(this)}>
           &times;
         </button>

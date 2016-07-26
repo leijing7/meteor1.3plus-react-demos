@@ -15,11 +15,27 @@ class App extends Component {
 
     this.state = {
       hideCompleted: false,
+      windowWidth: window.innerWidth,
+      clickedTaskText: ''
     };
+
+    this.handleResize = this.handleResize.bind(this)
+  }
+
+  handleResize() {
+    this.setState({windowWidth: window.innerWidth});
+  }
+
+  componentDidMount() {
+    window.addEventListener('resize', this.handleResize);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleResize);
   }
 
   handleSubmit(event) {
-   event.preventDefault(); //取消默认提交表格的动作,不然会自动刷新页面
+    event.preventDefault(); //取消默认提交表格的动作,不然会自动刷新页面
 
     // 通过 React ref 获得输入的文本
     const text = ReactDOM.findDOMNode(this.refs.textInput).value.trim();
@@ -36,6 +52,12 @@ class App extends Component {
     });
   }
 
+  oneItemClicked(taskText){
+    this.setState({
+      clickedTaskText: taskText
+    })
+  }
+
   renderTasks() {
     let filteredTasks = this.props.tasks;
     if (this.state.hideCompleted) {
@@ -50,6 +72,7 @@ class App extends Component {
           key={task._id}
           task={task}
           showPrivateButton={showPrivateButton}
+          itemClicked={this.oneItemClicked.bind(this)}
         />
       );
     });
@@ -99,6 +122,9 @@ class App extends Component {
         <ul>
           {this.renderTasks()}
         </ul>
+
+        <div style={{padding: 10}}>当前窗口宽度: {this.state.windowWidth}</div>
+        <div style={{padding: 10}}>被点击的任务: {this.state.clickedTaskText}</div>
       </div>
     );
   }
