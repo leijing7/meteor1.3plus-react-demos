@@ -4,3 +4,8 @@
 ## simple-todos-react
 
 Meteor 官方例子，中文注释，有微小改动
+
+## semantic-ui-router
+
+基于 Meteor 1.4
+这个例子是关于使用 Semantic UI 这个前端框架，FlowRouter 等来构建应用的例子
