@@ -21,3 +21,4 @@ insecure@1.0.7                # Allow all DB writes from clients (for prototypin
 semantic:ui
 juliancwirko:postcss
 less
+kadira:flow-router

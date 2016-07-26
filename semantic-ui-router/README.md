@@ -29,8 +29,24 @@ meteor add semantic:ui juliancwirko:postcss less jquery
 meteor npm install
 ```
 
-在 client/lib/semantic-ui/custom.semantic.json 创建一个新的空文件，然后运行 meteor。
+创建一个新的空文件 client/lib/semantic-ui/custom.semantic.json ，然后运行 meteor。
 
 meteor 启动后删除自动生成的 client/lib/semantic-ui/.custom.semantic.json 文件，注意有一个点在前面。
 
 现在你的 Semantic UI 就可以使用了。
+
+## FlowRouter
+
+安装 kadirahq 全家桶
+
+```
+meteor add kadira:flow-router    
+meteor npm install --save react-mounter
+```
+
+#### React Mounter
+这个包是之前的 [Layout](https://github.com/kadirahq/meteor-react-layout) 替代品。作用是把 React 的组件加载到 DOM 上去。
+
+特别之处是和 FlowRouter 一起使用可以支持 SSR - Server Side Rendering。
+
+使用这个包就不再需要 Meteor 自动生成的 main.html 了，因为 react-mounter 可以为你创建一个根 DOM 节点。此后所有 HTML 和 CSS 都是由 JSX 生成。
