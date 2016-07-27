@@ -18,12 +18,16 @@ class App extends Component {
       windowWidth: window.innerWidth,
       clickedTaskText: ''
     };
-
+    this.clickedTitleCount = 0;
+    console.log(this.clickedTitleCount);
     this.handleResize = this.handleResize.bind(this)
   }
 
   handleResize() {
     this.setState({windowWidth: window.innerWidth});
+    //注意，下面的 this.state.windowWidth 不会保证输出的是更新过的值
+    //因为 React 更多是 scheduling，为了性能原因，可能不是立即更新
+    console.log(this.state.windowWidth);
   }
 
   componentDidMount() {
@@ -32,6 +36,10 @@ class App extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleResize);
+  }
+
+  shouldComponentUpdate() {
+    return true
   }
 
   handleSubmit(event) {
@@ -79,7 +87,7 @@ class App extends Component {
   }
 
   headerClicked(){
-    alert('你点击了标题')
+    alert(`你点击了标题 ${++this.clickedTitleCount} 次`)
   }
 
   render() {
@@ -92,7 +100,7 @@ class App extends Component {
       <div className="container">
         <header>
           {/* 注意这里使用的 inline style */}
-          <h1 style={{color: 'green'}} onClick={this.headerClicked}>
+          <h1 style={{color: 'green'}} onClick={this.headerClicked.bind(this)}>
             Todo 列表 ({this.props.incompleteCount})
           </h1>
 

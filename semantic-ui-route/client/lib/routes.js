@@ -56,7 +56,7 @@ FlowRouter.route("/setting", {
   }
 });
 
-FlowRouter.notFound = {
+FlowRouter.notFound = { //所有 404 页面
   action() {
     alert("你找的地址不存在")
     FlowRouter.go("/")

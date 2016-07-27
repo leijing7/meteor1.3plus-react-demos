@@ -1,5 +1,4 @@
 import React from 'react';
-import {Menu} from '../../imports/ui/Menu.jsx';
 
 // 主要布局
 export const Layout = ({menu, content}) => (
