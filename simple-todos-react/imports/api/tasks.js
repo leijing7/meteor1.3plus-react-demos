@@ -46,21 +46,31 @@ Meteor.methods({
     //     });
     //   }, 3000)
     // }
-    // if (Meteor.isClient) {
-    //   Tasks.insert({
-    //     text,
-    //     createdAt: new Date(),
-    //     owner: this.userId,
-    //     username: Meteor.users.findOne(this.userId).username,
-    //   });
-    // }
+    if (Meteor.isServer) {
+      Meteor._sleepForMs(3000)
 
-    Tasks.insert({
-      text,
-      createdAt: new Date(),
-      owner: this.userId,
-      username: Meteor.users.findOne(this.userId).username,
-    });
+      Tasks.insert({
+        text,
+        createdAt: new Date(),
+        owner: this.userId,
+        username: Meteor.users.findOne(this.userId).username,
+      });
+    }
+    if (Meteor.isClient) {
+      Tasks.insert({
+        text,
+        createdAt: new Date(),
+        owner: this.userId,
+        username: Meteor.users.findOne(this.userId).username,
+      });
+    }
+
+    // Tasks.insert({
+    //   text,
+    //   createdAt: new Date(),
+    //   owner: this.userId,
+    //   username: Meteor.users.findOne(this.userId).username,
+    // });
   },
   'tasks.remove'(taskId) {
     check(taskId, String);

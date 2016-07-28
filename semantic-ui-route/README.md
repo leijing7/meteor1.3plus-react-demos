@@ -31,7 +31,7 @@ meteor npm install
 
 创建一个新的空文件 client/lib/semantic-ui/custom.semantic.json ，注意不要更改位置，因为 Meteor 对文件位置敏感。然后运行 meteor。
 
-meteor 启动后删除自动生成的 client/lib/semantic-ui/.custom.semantic.json 文件，注意有一个点在前面。
+meteor 启动后删除自动生成的 client/lib/semantic-ui/.custom.semantic.json 文件，注意有一个点在前面。然后停止 Meteor 程序再次启动。
 
 现在你的 Semantic UI 就可以使用了。
 
