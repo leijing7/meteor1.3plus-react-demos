@@ -32,45 +32,24 @@ Meteor.methods({
       throw new Meteor.Error('not-authorized');
     }
 
+    const newTask = {
+      text,
+      createdAt: new Date(),
+      owner: this.userId,
+      username: Meteor.users.findOne(this.userId).username,
+    }
+    const insertTask = () => Tasks.insert( newTask )
 // 下面是为了说明 optimistic ui 的预测更新
 // 大家会看到在添加新任务时会有页面闪烁现象，就是新添加的任务出现在了任务列表，
 // 但是因为服务器端直接跳过了，所有又收回，就闪烁了
 // 但是最终 3 秒后还是出现在了任务列表
-    // if (Meteor.isServer) {
-    //   Meteor.setTimeout(() => {
-    //     Tasks.insert({
-    //       text,
-    //       createdAt: new Date(),
-    //       owner: this.userId,
-    //       username: Meteor.users.findOne(this.userId).username,
-    //     });
-    //   }, 3000)
-    // }
     if (Meteor.isServer) {
-      Meteor._sleepForMs(3000)
-
-      Tasks.insert({
-        text,
-        createdAt: new Date(),
-        owner: this.userId,
-        username: Meteor.users.findOne(this.userId).username,
-      });
+      //Meteor._sleepForMs(2000)
+      insertTask()
     }
     if (Meteor.isClient) {
-      Tasks.insert({
-        text,
-        createdAt: new Date(),
-        owner: this.userId,
-        username: Meteor.users.findOne(this.userId).username,
-      });
+      insertTask()
     }
-
-    // Tasks.insert({
-    //   text,
-    //   createdAt: new Date(),
-    //   owner: this.userId,
-    //   username: Meteor.users.findOne(this.userId).username,
-    // });
   },
   'tasks.remove'(taskId) {
     check(taskId, String);

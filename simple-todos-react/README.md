@@ -2,7 +2,7 @@
 
 
 # Simple Todo List
-
+(已经升级到 Meteor 1.4)
 Meteor1.3 + React 的官方 todos 例子代码剖析。安装
 
 1. 安装 Meteor 1.3+
