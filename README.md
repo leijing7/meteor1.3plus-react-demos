@@ -13,3 +13,7 @@ Meteor 官方例子，中文注释，有微小改动
 ## meteor-data-and-react
 
 [React-komposer 例子的 fork](https://github.com/kadira-samples/meteor-data-and-react)
+
+## WhichCab
+
+这个例子是 semantic-ui-router 例子的升级版，主要是介绍 React-komposer 还有前后端交互等等
