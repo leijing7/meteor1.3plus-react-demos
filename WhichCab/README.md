@@ -41,7 +41,12 @@ meteor 启动后删除自动生成的 client/lib/semantic-ui/.custom.semantic.js
 * flow-router
 * react-mounter
 * react-komposer
+* dochead
 
+[dochead](https://github.com/kadirahq/meteor-dochead) 是 Meteor 包
+```
+meteor add kadira:dochead
+```
 
 #### React Mounter
 这个包是之前的 [Layout](https://github.com/kadirahq/meteor-react-layout) 替代品。作用是把 React 的组件加载到 DOM 上去。
@@ -57,4 +62,12 @@ meteor 启动后删除自动生成的 client/lib/semantic-ui/.custom.semantic.js
 
 ```
 meteor remove autopublish insecure
+```
+
+#### 添加账号包
+
+```
+meteor add accounts-password
+meteor add accounts-google
+meteor add accounts-github
 ```

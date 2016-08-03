@@ -9,7 +9,7 @@ mobile-experience@1.0.4       # Packages for a great mobile UX
 mongo@1.1.10                   # The database Meteor supports right now
 blaze-html-templates@1.0.4    # Compile .html files into Meteor Blaze views
 reactive-var@1.0.10            # Reactive variable for tracker
-jquery                  # Helpful client-side library
+jquery@1.11.9                  # Helpful client-side library
 tracker@1.1.0                 # Meteor's client-side reactive programming library
 
 standard-minifier-js@1.1.8    # JS minifier run for production mode
@@ -18,5 +18,9 @@ ecmascript@0.5.7              # Enable ECMAScript2015+ syntax in app code
 
 semantic:ui
 juliancwirko:postcss
-less
+less@2.7.4
 kadira:flow-router
+kadira:dochead
+accounts-google
+accounts-github
+accounts-password

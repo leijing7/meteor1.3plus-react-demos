@@ -23,3 +23,13 @@ export const SettingLayout = ({menu, content}) => (
     </div>
   </div>
 );
+
+// 账号布局
+export const SimpleLayout = ({menu, content}) => (
+  <div>
+    <div>{menu}</div>
+    <div className="ui container" style={{paddingTop: 160}}>
+      {content}
+    </div>
+  </div>
+);
