@@ -28,7 +28,7 @@ export const SettingLayout = ({menu, content}) => (
 export const SimpleLayout = ({menu, content}) => (
   <div>
     <div>{menu}</div>
-    <div className="ui container" style={{paddingTop: 160}}>
+    <div className="ui container" style={{paddingTop: 50}}>
       {content}
     </div>
   </div>

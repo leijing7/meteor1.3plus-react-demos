@@ -15,6 +15,7 @@ import NotFoundModal   from '../../imports/ui/notFoundModal.jsx';
 
 FlowRouter.route("/", {
   action() {
+    DocHead.setTitle("WhichCab");
     mount(Layout, {
       menu: <Menu activeItem={'home'}/>,
       content: (

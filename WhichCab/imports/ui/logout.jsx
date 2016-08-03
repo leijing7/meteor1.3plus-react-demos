@@ -10,7 +10,7 @@ export default class Logout extends React.Component{
       if (err) {
         console.log(err)
       } else {
-        FlowRouter.go('/') 
+        FlowRouter.go('/')
       }
     })
   }

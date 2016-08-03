@@ -16,3 +16,24 @@ Meteor.methods({
 Meteor.users.deny({
   update() { return true; }
 });
+
+
+// ServiceConfiguration.configurations.upsert(
+//   { service: 'github' },
+//   {
+//     $set: {
+//       clientId: Meteor.settings.githubClientId,
+//       secret: Meteor.settings.githubClientSecret
+//     }
+//   }
+// );
+//
+// ServiceConfiguration.configurations.upsert(
+//   { service: 'google' },
+//   {
+//     $set: {
+//       clientId: Meteor.settings.googleClientId,
+//       secret: Meteor.settings.googleClientSecret
+//     }
+//   }
+// );

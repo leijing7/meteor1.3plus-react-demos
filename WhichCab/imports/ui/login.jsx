@@ -14,8 +14,7 @@ export default class Login extends React.Component{
         if (err) {
           if (err.reason === 'User not found') {
             ReactDOM.render(
-              <ErrorMsg p={'该用户不存在'}/>,
-              document.getElementById("errMsg")
+              <ErrorMsg p={'该用户不存在'}/>, document.getElementById("errMsg")
             )
           }
           if (err.reason === 'Incorrect password') {

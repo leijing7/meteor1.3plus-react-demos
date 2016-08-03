@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const PriceTable = () => 
+export const PriceTable = () =>
   <table className="ui celled striped table">
     <thead>
       <tr>
