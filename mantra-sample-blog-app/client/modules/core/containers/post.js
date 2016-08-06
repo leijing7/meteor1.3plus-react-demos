@@ -17,7 +17,12 @@ export const composer = ({context, postId}, onData) => {
   }
 };
 
+export const depsMapper = (context, actions) => ({
+  create: actions.header.create,
+  context: () => context
+});
+
 export default composeAll(
   composeWithTracker(composer),
-  useDeps()
+  useDeps(depsMapper)
 )(Post);

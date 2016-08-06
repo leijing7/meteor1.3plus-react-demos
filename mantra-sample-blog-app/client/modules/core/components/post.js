@@ -1,16 +1,22 @@
 import React from 'react';
 import CommentList from '../../comments/containers/comment_list';
+import ModifyHeader from './modify_header';
 
-const Post = ({post}) => (
+const postContentStyle = {
+  borderBottom: '1px solid #EAEAEA',
+  paddingBottom: 35
+}
+
+const Post = (props) => (
   <div>
-    {post.saving ? <p>Saving...</p> : null}
-    <h2>{post.title}</h2>
-    <p>
-      {post.content}
+    {props.post.saving ? <p>Saving...</p> : null}
+    <h2>{props.post.title} <ModifyHeader {...props}/></h2>
+    <p style={postContentStyle}>
+      {props.post.content}
     </p>
     <div>
       <h4>Comments</h4>
-      <CommentList postId={post._id}/>
+      <CommentList postId={props.post._id}/>
     </div>
   </div>
 );

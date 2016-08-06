@@ -20,6 +20,21 @@ export default function () {
   });
 
   Meteor.methods({
+    'posts.modify'(_id, title) {
+      check(_id, String);
+      check(title, String);
+
+      // Demo the latency compensations (Delete this in production)
+      Meteor._sleepForMs(500);
+
+      // XXX: Do some user authorization
+      Posts.update(_id, {
+        $set: { title }
+      });
+    }
+  });
+
+  Meteor.methods({
     'posts.createComment'(_id, postId, text) {
       check(_id, String);
       check(postId, String);
