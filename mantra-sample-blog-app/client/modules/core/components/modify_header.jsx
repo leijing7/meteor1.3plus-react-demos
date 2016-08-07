@@ -3,25 +3,23 @@ import React from 'react';
 class ModifyHeader extends React.Component {
   constructor(props) {
     super(props);
-    console.log(props);
   }
 
   render() {
+    const {error} = this.props;
     return (
-      <button onClick={this._modify.bind(this)} style={{marginLeft: 10}}>修改标题</button>
+      <span>
+        <button onClick={this._modify.bind(this)} style={{marginLeft: 10}}>修改标题</button>
+        {error ? <span style={{color: 'red'}}>{error}</span> : null} {/* 空标题错误提示*/}
+      </span>
     );
   }
 
   _modify() {
     const newTitle = prompt("修改标题", this.props.post.title)
-    const {create} = this.props;
-    console.log(create,this.props, 9090);
-    if (newTitle) {
-      const postId = this.props.post._id
-      console.log(postId, newTitle);
-      create(postId, newTitle)
-    }
-    return
+    const postId = this.props.post._id
+    const {modify} = this.props
+    modify(postId, newTitle)
   }
 }
 

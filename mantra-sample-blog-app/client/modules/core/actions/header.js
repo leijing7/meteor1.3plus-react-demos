@@ -1,7 +1,7 @@
 export default {
-  create({Meteor, LocalState}, id, title) {
+  modify({Meteor, LocalState}, id, title) {
     if (!title) {
-      return LocalState.set('SAVING_ERROR', 'Title are required!');
+      return LocalState.set('SAVING_ERROR', ' 标题不能为空');
     }
 
     LocalState.set('SAVING_ERROR', null);
@@ -11,5 +11,9 @@ export default {
         return LocalState.set('SAVING_ERROR', err.message);
       }
     });
+  },
+
+  clearErrors({LocalState}) {
+    return LocalState.set('SAVING_ERROR', null);
   }
 }
