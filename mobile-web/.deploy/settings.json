@@ -1,0 +1,7 @@
+{
+  "public": {
+    "env": "dev",
+    "version": "v0.1.0",
+    "cnncUrl": "http://www.cnnc.com.cn/"
+  }
+}

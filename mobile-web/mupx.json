@@ -1,0 +1,22 @@
+{
+  "servers": [
+    {
+      "host": "128.199.102.116",
+      "username": "root",
+      "pem": "~/.ssh/id_rsa",
+   // "password": "your password"
+    }
+  ],
+
+  "setupMongo": true,
+  "appName": "mobileweb",
+  "app": "~/Data/mr_edu/demos/mobile-web",
+
+  "env": {
+    "PORT": 80,
+    "ROOT_URL": "http://demo.plw.io"
+  },
+
+  "deployCheckWaitTime": 60,
+  "enableUploadProgressBar": true
+}
