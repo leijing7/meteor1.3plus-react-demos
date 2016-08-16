@@ -70,3 +70,12 @@ meteor npm install
 meteor 启动后删除自动生成的 client/lib/semantic-ui/.custom.semantic.json 文件，注意有一个点在前面。然后停止 Meteor 程序再次启动。
 
 现在你的 Semantic UI 就可以使用了。
+
+部署
+
+```
+npm -g install git+https://github.com/RockaLabs/meteor-up.git#muprockanew // 安装
+muprockanew setup --config mupx.json  //设置
+
+muprockanew deploy --config mupx.json --settings settings-staging.json
+```

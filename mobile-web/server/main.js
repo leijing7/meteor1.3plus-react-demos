@@ -5,5 +5,5 @@ publications();
 methods();
 
 Meteor.startup(function(){
-  console.log("--- info --- ", Meteor.settings.serverOnly);
+  console.log("--- server started --- ");
 })

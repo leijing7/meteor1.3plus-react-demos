@@ -77,7 +77,7 @@ const Home = () => (
                   <img className="weui_media_appmsg_thumb" src="imgs/fyh.jpg" alt=""/>
               </div>
               <div className="weui_media_bd">
-                  <h4 className="weui_media_title">标题一</h4>
+                  <h4 className="weui_media_title">傅园慧</h4>
                   <p className="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
               </div>
           </a>
@@ -86,7 +86,7 @@ const Home = () => (
                   <img className="weui_media_appmsg_thumb" src="imgs/lx.jpeg" alt=""/>
               </div>
               <div className="weui_media_bd">
-                  <h4 className="weui_media_title">标题二</h4>
+                  <h4 className="weui_media_title">傅园慧</h4>
                   <p className="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
               </div>
           </a>

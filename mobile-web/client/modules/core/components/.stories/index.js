@@ -4,3 +4,4 @@ import journal_foot_bar from './journal_foot_bar';
 import journal_nav_bar from './journal_nav_bar';
 import new_article from './new_article';
 import article_nav_bar from './article_nav_bar';
+import bar_item from './bar_item';

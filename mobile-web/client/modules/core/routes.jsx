@@ -5,12 +5,18 @@ import MainLayout from './components/main_layout.jsx';
 import Home from './components/home.jsx';
 import Journals from './components/journals.jsx';
 import NewArticle from './components/new_article.jsx';
+import Util from '/lib/util';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
   FlowRouter.route('/', {
     name: 'home',
+    triggersEnter: [function(context, redirect) { //if is pc, go to the admin site
+      if (!Util.isMobileDevice()) {
+        redirect('/admin');
+      }
+    }],
     action() {
       mount(MainLayoutCtx, {
         content: () => (<Home />)
@@ -63,4 +69,11 @@ export default function (injectDeps, {FlowRouter}) {
       });
     }
   });
+
+  FlowRouter.notFound = {
+    action() {
+      alert("你找的地址不存在")
+      FlowRouter.go("/")
+    }
+  };
 }
