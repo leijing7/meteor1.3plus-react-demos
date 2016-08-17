@@ -9,7 +9,7 @@ export const contact = {
 }
 
 
-export const experts = 
+export const experts =
   [{
     imgUrl: "/imgs/xingji.png",
     name: "邢继",
@@ -33,4 +33,36 @@ export const experts =
     name: "叶奇蓁",
     title: "中国工程科学院院士",
     description: "中国工程科学院院士，著有“我国核电仪控系统的自主化之路”等"
+  }]
+
+export const companies =
+  [{
+    committee: "钱智民",
+    title: "理事长",
+    name: "中国核工业集团公司"
+  },
+  {
+    committee: "祖斌",
+    title: "副理事长",
+    name: "中国核工业建设集团公司"
+  },
+  {
+    committee: "王永福",
+    title: "副理事长",
+    name: "中国华能集团公司"
+  },
+  {
+    committee: "王平",
+    title: "副理事长",
+    name: "中国大唐集团公司"
+  },
+  {
+    committee: "余剑锋",
+    title: "副理事长",
+    name: "中国电力投资集团公司"
+  },
+  {
+    committee: "郑建能",
+    title: "副理事长",
+    name: "中国第二重型机械集团公司"
   }]

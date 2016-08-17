@@ -32,7 +32,6 @@ export default class FootBar extends React.Component {
   }
   cooperationClicked(){
     FlowRouter.go('/co')
-    alert("Under construction...")
   }
   expertClicked(){
     FlowRouter.go('/expert')
