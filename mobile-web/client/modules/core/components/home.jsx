@@ -1,5 +1,4 @@
 import React from 'react';
-import 'weui/dist/style/weui.min.css';
 import FootBar from './foot_bar';
 import {Color} from '/lib/util';
 

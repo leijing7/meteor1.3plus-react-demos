@@ -25,7 +25,7 @@ const Menu = ({activeItem, username}) => {
             <a className={activeItem === 'about' ? 'active item' : 'item'} href="/about">
               征稿启事
             </a>
-            <a className={activeItem === 'about' ? 'active item' : 'item'} href="/about">
+            <a className={activeItem === 'contact' ? 'active item' : 'item'} href="/admin/contact">
               联系方式
             </a>
             <div className="right menu">

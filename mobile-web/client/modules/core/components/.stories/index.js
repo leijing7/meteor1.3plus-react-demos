@@ -5,3 +5,5 @@ import journal_nav_bar from './journal_nav_bar';
 import new_article from './new_article';
 import article_nav_bar from './article_nav_bar';
 import bar_item from './bar_item';
+import editor_contact from './editor_contact';
+import co_companies from './co_companies';

@@ -1,6 +1,7 @@
 import {createApp} from 'mantra-core';
 import initContext from './configs/context';
 import {Color} from '../lib/util';
+import 'weui/dist/style/weui.min.css';
 
 // modules
 import coreModule from './modules/core';

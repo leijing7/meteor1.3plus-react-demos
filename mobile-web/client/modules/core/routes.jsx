@@ -5,6 +5,8 @@ import MainLayout from './components/main_layout.jsx';
 import Home from './components/home.jsx';
 import Journals from './components/journals.jsx';
 import NewArticle from './components/new_article.jsx';
+import EditorContact from './containers/editor_contact.js';
+import CoCompanies from './containers/co_companies.js';
 import Util from '/lib/util';
 
 export default function (injectDeps, {FlowRouter}) {
@@ -37,7 +39,7 @@ export default function (injectDeps, {FlowRouter}) {
     name: 'cooperation',
     action() {
       mount(MainLayoutCtx, {
-        content: () => (<Home />)
+        content: () => (<CoCompanies />)
       });
     }
   });
@@ -66,6 +68,15 @@ export default function (injectDeps, {FlowRouter}) {
     action() {
       mount(MainLayoutCtx, {
         content: () => (<NewArticle item={'search'}/>)
+      });
+    }
+  });
+
+  FlowRouter.route('/contact', {
+    name: 'contact',
+    action() {
+      mount(MainLayoutCtx, {
+        content: () => (<EditorContact item={'contact'}/>)
       });
     }
   });

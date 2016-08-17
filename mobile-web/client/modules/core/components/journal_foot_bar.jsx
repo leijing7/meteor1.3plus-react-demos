@@ -40,7 +40,6 @@ export default class JournalFootBar extends React.Component {
   }
   contactClicked(){
     FlowRouter.go('/contact')
-    alert("Under construction...")
   }
   render() {
     return (

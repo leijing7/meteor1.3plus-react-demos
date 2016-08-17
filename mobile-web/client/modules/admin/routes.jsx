@@ -4,7 +4,8 @@ import {mount} from 'react-mounter';
 import {PcLayout} from '/client/modules/admin/components/pc_layout.jsx';
 import Home from './components/home.jsx';
 import Experts from './components/experts.jsx';
-import Menu from './containers/menu.js';
+import Contact from './containers/contact';
+import Menu from './containers/menu';
 
 export default function (injectDeps, {FlowRouter}) {
   const PcLayoutCtx = injectDeps(PcLayout);
@@ -25,6 +26,16 @@ export default function (injectDeps, {FlowRouter}) {
       mount(PcLayoutCtx, {
         menu: <Menu activeItem={'experts'}/>,
         content: () => (<Experts />)
+      });
+    }
+  });
+
+  FlowRouter.route('/admin/contact', {
+    name: 'admin.contact',
+    action() {
+      mount(PcLayoutCtx, {
+        menu: <Menu activeItem={'contact'}/>,
+      content: () => (<Contact />)
       });
     }
   });
