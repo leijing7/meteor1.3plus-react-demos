@@ -1,6 +1,6 @@
 import React from 'react';
-import FootBar from './foot_bar';
 import {Color} from '/lib/util';
+import 'weui/dist/style/weui.min.css';
 
 const Title = ({text}) => (
   <div
@@ -54,46 +54,45 @@ const expertInfo4 = {
   description: '中国游泳队 <br /> 200 米自由泳'
 }
 
-const Home = () => (
-  <div>
-    <img src="imgs/home-top.png" width="100%"/>
-    <Title text={'专家'}/>
-    <div className='ui two column grid'>
-      <div className='row'>
-        <ExpertItem {...expertInfo1} />
-        <ExpertItem {...expertInfo2} />
-        <ExpertItem {...expertInfo3} />
-        <ExpertItem {...expertInfo4} />
+const Home = () => {
+  return (
+    <div>
+      <img src="imgs/home-top.png" width="100%"/>
+      <Title text={'专家'}/>
+      <div className='ui two column grid'>
+        <div className='row'>
+          <ExpertItem {...expertInfo1} />
+          <ExpertItem {...expertInfo2} />
+          <ExpertItem {...expertInfo3} />
+          <ExpertItem {...expertInfo4} />
+        </div>
+      </div>
+
+      <div className="weui_panel weui_panel_access">
+        <Title text={'专访'}/>
+        <div className="weui_panel_bd">
+            <a href="javascript:void(0);" className="weui_media_box weui_media_appmsg">
+                <div className="weui_media_hd">
+                    <img className="weui_media_appmsg_thumb" src="imgs/fyh.jpg" alt=""/>
+                </div>
+                <div className="weui_media_bd">
+                    <h4 className="weui_media_title">傅园慧</h4>
+                    <p className="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                </div>
+            </a>
+            <a href="javascript:void(0);" className="weui_media_box weui_media_appmsg">
+                <div className="weui_media_hd">
+                    <img className="weui_media_appmsg_thumb" src="imgs/lx.jpeg" alt=""/>
+                </div>
+                <div className="weui_media_bd">
+                    <h4 className="weui_media_title">傅园慧</h4>
+                    <p className="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                </div>
+            </a>
+        </div>
       </div>
     </div>
-
-
-    <div className="weui_panel weui_panel_access">
-      <Title text={'专访'}/>
-      <div className="weui_panel_bd">
-          <a href="javascript:void(0);" className="weui_media_box weui_media_appmsg">
-              <div className="weui_media_hd">
-                  <img className="weui_media_appmsg_thumb" src="imgs/fyh.jpg" alt=""/>
-              </div>
-              <div className="weui_media_bd">
-                  <h4 className="weui_media_title">傅园慧</h4>
-                  <p className="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
-              </div>
-          </a>
-          <a href="javascript:void(0);" className="weui_media_box weui_media_appmsg">
-              <div className="weui_media_hd">
-                  <img className="weui_media_appmsg_thumb" src="imgs/lx.jpeg" alt=""/>
-              </div>
-              <div className="weui_media_bd">
-                  <h4 className="weui_media_title">傅园慧</h4>
-                  <p className="weui_media_desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
-              </div>
-          </a>
-      </div>
-    </div>
-
-    <FootBar item={'home'}/>
-  </div>
-);
+  )
+};
 
 export default Home;

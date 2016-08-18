@@ -7,3 +7,6 @@ import article_nav_bar from './article_nav_bar';
 import bar_item from './bar_item';
 import editor_contact from './editor_contact';
 import co_companies from './co_companies';
+import conferences from './conferences';
+import experts from './experts';
+import notice from './notice';

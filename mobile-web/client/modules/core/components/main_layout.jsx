@@ -1,11 +1,36 @@
 import React from 'react';
+import FootBar from './foot_bar';
+import JournalFootBar from './journal_foot_bar';
 
-const Layout = ({content = () => null }) => (
-  <div>
+
+export const MainLayout = ({content = () => null }) => {
+  const containerStyle = {
+    height: $(window).height() - 36,
+    overflow: 'auto'
+  }
+  return(
     <div>
-      {content()}
-    </div>
-  </div>
-);
+      <div style={containerStyle} className="weui_tab_bd">
+        {content()}
+      </div>
 
-export default Layout;
+      <FootBar/>
+    </div>
+  )
+};
+
+export const JournalLayout = ({content = () => null }) => {
+  const containerStyle = {
+    height: $(window).height() - 36,
+    overflow: 'auto'
+  }
+  return(
+    <div>
+      <div style={containerStyle} className="weui_tab_bd">
+        {content()}
+      </div>
+
+      <JournalFootBar/>
+    </div>
+  )
+};

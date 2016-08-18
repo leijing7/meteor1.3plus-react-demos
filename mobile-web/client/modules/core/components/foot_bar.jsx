@@ -2,27 +2,10 @@ import React from 'react';
 import {Color} from '/lib/util';
 import BarItem from './bar_item.jsx'
 
-// const BarItem = (props) =>
-//   <a href="javascript:;" className="weui_tabbar_item" onClick={props.clicked}>
-//     <div className="weui_tabbar_icon">
-//       <i className = {props.icon + ' large icon'} style={{color: props.color}}/>
-//     </div>
-//     <p className="weui_tabbar_label" style={{color: props.color}}>
-//        {props.text}
-//     </p>
-//   </a>
 
 export default class FootBar extends React.Component {
   constructor(props) {
     super(props);
-    this.items = {
-      home: 'grey',
-      journal: 'grey',
-      cooperation: 'grey',
-      expert: 'grey',
-      conference: 'grey'
-    }
-    this.items[this.props.item] = Color.primaryText
   }
   homeClicked(){
     FlowRouter.go('/')
@@ -34,14 +17,20 @@ export default class FootBar extends React.Component {
     FlowRouter.go('/co')
   }
   expertClicked(){
-    FlowRouter.go('/expert')
-    alert("Under construction...")
+    FlowRouter.go('/experts')
   }
   conferenceClicked(){
     FlowRouter.go('/conf')
-    alert("Under construction...")
   }
   render() {
+    this.items = {
+      home: 'grey',
+      journal: 'grey',
+      cooperation: 'grey',
+      experts: 'grey',
+      conferences: 'grey'
+    }
+    this.items[FlowRouter.getRouteName()] = Color.primaryText
     return (
       <div className="weui_tabbar">
         <BarItem text={'首页'}
@@ -50,7 +39,7 @@ export default class FootBar extends React.Component {
          clicked={this.homeClicked.bind(this)}/>
 
         <BarItem text={'核电专家'}
-         color={this.items.expert}
+         color={this.items.experts}
          icon={'student'}
          clicked={this.expertClicked.bind(this)}/>
 
@@ -60,7 +49,7 @@ export default class FootBar extends React.Component {
         clicked={this.cooperationClicked.bind(this)}/>
 
        <BarItem text={'行业会议'}
-         color={this.items.conference}
+         color={this.items.conferences}
          icon={'list'}
          clicked={this.conferenceClicked.bind(this)}/>
 

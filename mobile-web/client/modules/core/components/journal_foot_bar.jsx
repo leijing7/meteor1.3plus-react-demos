@@ -16,14 +16,6 @@ import BarItem from './bar_item.jsx'
 export default class JournalFootBar extends React.Component {
   constructor(props) {
     super(props);
-    this.items = {
-      back: 'grey',
-      journal: 'grey',
-      search: 'grey',
-      notice: 'grey',
-      contact: 'grey'
-    }
-    this.items[this.props.item] = Color.primaryText
   }
   backClicked(){
     FlowRouter.go('/')
@@ -36,12 +28,19 @@ export default class JournalFootBar extends React.Component {
   }
   noticeClicked(){
     FlowRouter.go('/notice')
-    alert("Under construction...")
   }
   contactClicked(){
     FlowRouter.go('/contact')
   }
   render() {
+    this.items = {
+      back: 'grey',
+      journal: 'grey',
+      search: 'grey',
+      notice: 'grey',
+      contact: 'grey'
+    }
+    this.items[FlowRouter.getRouteName()] = Color.primaryText
     return (
       <div className="weui_tabbar">
         <BarItem text={'首页'}

@@ -1,5 +1,4 @@
 import React from 'react';
-import FootBar from './foot_bar';
 import {companies} from '/lib/mocking';
 
 
@@ -10,7 +9,7 @@ const CoCompanies = () => (
     <p style={{fontSize: '1.1em', paddingLeft: 10, paddingTop: 10}}><strong> 核行业知名企业 </strong></p>
     <div className="ui celled grid">
       <div className="row" style={{fontSize: '1.2em'}}>
-        <div className="three wide column" style={{borderBox: '1px'}}>
+        <div className="three wide column">
         <strong>姓名</strong>
         </div>
         <div className="four wide column">
@@ -38,7 +37,6 @@ const CoCompanies = () => (
         )
       }
     </div>
-    <FootBar item={'cooperation'}/>
   </div>
 );
 

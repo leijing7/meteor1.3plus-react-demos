@@ -1,85 +1,49 @@
 import React from 'react';
 import {mount} from 'react-mounter';
 
-import MainLayout from './components/main_layout.jsx';
+import {MainLayout, JournalLayout} from './components/main_layout.jsx';
 import Home from './components/home.jsx';
 import Journals from './components/journals.jsx';
 import NewArticle from './components/new_article.jsx';
 import EditorContact from './containers/editor_contact.js';
 import CoCompanies from './containers/co_companies.js';
+import Conferences from './containers/conferences.js';
+import Notice from './containers/notice.js';
+import Experts from './containers/experts.js';
+import FootBar from './components/foot_bar';
 import Util from '/lib/util';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
+  const JournalLayoutCtx = injectDeps(JournalLayout);
 
-  FlowRouter.route('/', {
-    name: 'home',
-    triggersEnter: [function(context, redirect) { //if is pc, go to the admin site
+  const router = (name, content, layout) => {
+    return {
+      name: name,
+      action() {
+        mount(layout, {
+          content: () => content
+        });
+      }
+    }
+  }
+
+  const routerHome = router('home', <Home />, MainLayoutCtx)
+  routerHome['triggersEnter'] =
+    [function(context, redirect) { //if is pc, go to the admin site
       if (!Util.isMobileDevice()) {
         redirect('/admin');
       }
-    }],
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<Home />)
-      });
-    }
-  });
+    }]
+  FlowRouter.route('/', routerHome);
+  FlowRouter.route('/experts', router('experts', <Experts />, MainLayoutCtx));
+  FlowRouter.route('/co', router('cooperation', <CoCompanies />, MainLayoutCtx));
+  FlowRouter.route('/conf', router('conferences', <Conferences />, MainLayoutCtx));
 
-  FlowRouter.route('/journal', {
-    name: 'journal',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<Journals />)
-      });
-    }
-  });
-
-  FlowRouter.route('/co', {
-    name: 'cooperation',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<CoCompanies />)
-      });
-    }
-  });
-
-  FlowRouter.route('/expert', {
-    name: 'experts',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<Home />)
-      });
-    }
-  });
-
-  FlowRouter.route('/conf', {
-    name: 'conferences',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<Home />)
-      });
-    }
-  });
-
-
-  FlowRouter.route('/search', {
-    name: 'search',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<NewArticle item={'search'}/>)
-      });
-    }
-  });
-
-  FlowRouter.route('/contact', {
-    name: 'contact',
-    action() {
-      mount(MainLayoutCtx, {
-        content: () => (<EditorContact item={'contact'}/>)
-      });
-    }
-  });
+  FlowRouter.route('/journal', router('journal', <Journals />, JournalLayoutCtx));
+  FlowRouter.route('/search', router('search', <NewArticle />, JournalLayoutCtx));
+  FlowRouter.route('/notice', router('notice', <Notice />, JournalLayoutCtx));
+  FlowRouter.route('/contact', router('contact', <EditorContact />, JournalLayoutCtx));
 
   FlowRouter.notFound = {
     action() {
