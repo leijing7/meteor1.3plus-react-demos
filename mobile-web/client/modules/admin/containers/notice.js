@@ -12,7 +12,8 @@ export const composer = ({context}, onData) => {
   }
 };
 
-export const depsMapper = (context) => ({
+export const depsMapper = (context, actions) => ({
+  save: actions.notice.save,
   context: () => context
 });
 

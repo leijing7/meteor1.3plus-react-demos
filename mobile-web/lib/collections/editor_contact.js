@@ -43,6 +43,14 @@ let schema = new SimpleSchema({
     label: "comment",
     optional: true,
     max: 600
+  },
+  createdAt: {
+    type: Date,
+    label: "created date"
+  },
+  updatedAt: {
+    type: Date,
+    label: "updated date"
   }
 });
 EditorContact.attachSchema(schema);

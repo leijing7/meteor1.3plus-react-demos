@@ -10,19 +10,19 @@ const Menu = ({activeItem, username}) => {
       <div className="ui container">
         <div className="ui inverted segment" style={headerStyle}>
           <div className="ui inverted secondary pointing menu" style={headerStyle}>
-            <a className={activeItem === 'home' ? 'active item' : 'item'} href="/">
+            <a className={activeItem === 'home' ? 'active item' : 'item'} href="/admin/home">
               管理员
             </a>
             <a className={activeItem === 'experts' ? 'active item' : 'item'} href="/admin/experts">
               专家专访
             </a>
-            <a className={activeItem === 'about' ? 'active item' : 'item'} href="/about">
-              企业合作
+            <a className={activeItem === 'companies' ? 'active item' : 'item'} href="/admin/companies">
+              合作企业
             </a>
-            <a className={activeItem === 'about' ? 'active item' : 'item'} href="/about">
+            <a className={activeItem === 'conferences' ? 'active item' : 'item'} href="/admin/conferences">
               行业会议
             </a>
-            <a className={activeItem === 'about' ? 'active item' : 'item'} href="/about">
+            <a className={activeItem === 'notice' ? 'active item' : 'item'} href="/admin/notice">
               征稿启事
             </a>
             <a className={activeItem === 'contact' ? 'active item' : 'item'} href="/admin/contact">

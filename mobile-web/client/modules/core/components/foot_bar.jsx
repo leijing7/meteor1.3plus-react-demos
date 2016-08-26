@@ -43,7 +43,7 @@ export default class FootBar extends React.Component {
          icon={'student'}
          clicked={this.expertClicked.bind(this)}/>
 
-       <BarItem text={'企业合作'}
+       <BarItem text={'合作企业'}
         color={this.items.cooperation}
         icon={'users'}
         clicked={this.cooperationClicked.bind(this)}/>

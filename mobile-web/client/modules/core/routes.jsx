@@ -32,7 +32,7 @@ export default function (injectDeps, {FlowRouter}) {
   routerHome['triggersEnter'] =
     [function(context, redirect) { //if is pc, go to the admin site
       if (!Util.isMobileDevice()) {
-        redirect('/admin');
+        redirect('/admin/home');
       }
     }]
   FlowRouter.route('/', routerHome);

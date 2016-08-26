@@ -15,7 +15,7 @@ const ExpertTable = () =>
     <thead>
       <tr>
         <th>照片</th>
-        <th>姓名</th>
+        <th className="one wide">姓名</th>
         <th>职位</th>
         <th>简述</th>
         <th> <i className="large blue plus icon"></i> </th>
