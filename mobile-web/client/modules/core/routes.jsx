@@ -6,9 +6,9 @@ import Home from './components/home.jsx';
 import Journals from './components/journals.jsx';
 import NewArticle from './components/new_article.jsx';
 import EditorContact from './containers/editor_contact.js';
-import CoCompanies from './containers/co_companies.js';
+import {Mobile_CoCompaniesContainer} from './containers/co_companies.js';
 import Conferences from './containers/conferences.js';
-import Notice from './containers/notice.js';
+import {Mobile_NoticeContainer} from './containers/notice.js';
 import Experts from './containers/experts.js';
 import FootBar from './components/foot_bar';
 import Util from '/lib/util';
@@ -37,12 +37,13 @@ export default function (injectDeps, {FlowRouter}) {
     }]
   FlowRouter.route('/', routerHome);
   FlowRouter.route('/experts', router('experts', <Experts />, MainLayoutCtx));
-  FlowRouter.route('/co', router('cooperation', <CoCompanies />, MainLayoutCtx));
+  FlowRouter.route('/co', router('cooperation', <Mobile_CoCompaniesContainer />, MainLayoutCtx));
   FlowRouter.route('/conf', router('conferences', <Conferences />, MainLayoutCtx));
 
   FlowRouter.route('/journal', router('journal', <Journals />, JournalLayoutCtx));
+
   FlowRouter.route('/search', router('search', <NewArticle />, JournalLayoutCtx));
-  FlowRouter.route('/notice', router('notice', <Notice />, JournalLayoutCtx));
+  FlowRouter.route('/notice', router('notice', <Mobile_NoticeContainer />, JournalLayoutCtx));
   FlowRouter.route('/contact', router('contact', <EditorContact />, JournalLayoutCtx));
 
   FlowRouter.notFound = {

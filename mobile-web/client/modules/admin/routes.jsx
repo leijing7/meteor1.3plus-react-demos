@@ -4,9 +4,10 @@ import {mount} from 'react-mounter';
 import {PcLayout} from '/client/modules/admin/components/pc_layout.jsx';
 import Home from './components/home.jsx';
 import Experts from './components/experts.jsx';
-import Companies from './containers/companies';
+import {Admin_CoCompaniesContainer} from '../core/containers/co_companies';
 import Contact from './containers/contact';
-import Notice from './containers/notice';
+import {Admin_NoticeContainer} from '../core/containers/notice';
+import Conferences from './containers/conferences';
 import Menu from './containers/menu';
 
 export default function (injectDeps, {FlowRouter}) {
@@ -31,8 +32,8 @@ export default function (injectDeps, {FlowRouter}) {
 
   router('home', <Home />, PcLayoutCtx)
   router('experts', <Experts />, PcLayoutCtx)
-  router('companies', <Companies />, PcLayoutCtx)
-  router('conferences', <Companies />, PcLayoutCtx)
-  router('notice', <Notice />, PcLayoutCtx)
+  router('companies', <Admin_CoCompaniesContainer />, PcLayoutCtx)
+  router('conferences', <Conferences />, PcLayoutCtx)
+  router('notice', <Admin_NoticeContainer />, PcLayoutCtx)
   router('contact', <Contact />, PcLayoutCtx)
 }

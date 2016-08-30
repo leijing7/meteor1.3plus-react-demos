@@ -1,5 +1,16 @@
 import React from 'react';
 import marked from 'marked'
+marked.setOptions({
+  renderer: new marked.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: true,
+  pedantic: false,
+  sanitize: true,
+  smartLists: false,
+  smartypants: false
+});
+
 
 class Notice extends React.Component {
   constructor(props) {

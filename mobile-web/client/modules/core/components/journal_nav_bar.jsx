@@ -4,30 +4,41 @@ import {Color} from '/lib/util';
 class JournalNavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { navBarClassName: ['active item', 'item', 'item'], navBar: 0 }
+    this.navBarClassNames = ['item', 'item', 'item']
   }
 
-  hottestClicked(){
-    this.setState({ navBarClassName: ['active item', 'item', 'item'], navBar: 0 })
+  listClicked(){
+    FlowRouter.go('/journal')
   }
-  newestClicked(){
-    this.setState({ navBarClassName: ['item', 'active item', 'item'], navBar: 1 })
+  strategyClicked(){
+    FlowRouter.go('/journal?item=strategy')
   }
-  historyClicked(){
-    this.setState({ navBarClassName: ['item', 'item', 'active item'], navBar: 2 })
+  skillClicked(){
+    FlowRouter.go('/journal?item=skill')
   }
   render(){
     const navBarStyle = {backgroundColor: Color.menuBgGray}
+    const activeItem = FlowRouter.getQueryParam('item')
+    switch (activeItem) {
+      case 'strategy':
+        this.navBarClassNames = ['item', 'active item', 'item']
+        break;
+      case 'skill':
+        this.navBarClassNames = ['item', 'item', 'active item']
+        break;
+      default:
+        this.navBarClassNames = ['active item', 'item', 'item']
+    }
     return (
       <div style={navBarStyle} className="ui ">
         <div className="ui three item inverted menu" style={navBarStyle}>
-          <a className="item" onClick={this.historyClicked.bind(this)}>
+          <a className={this.navBarClassNames[0]} onClick={this.listClicked.bind(this)}>
             核电期刊
           </a>
-          <a className="item" onClick={this.hottestClicked.bind(this)}>
+          <a className={this.navBarClassNames[1]} onClick={this.strategyClicked.bind(this)}>
             投稿策略
           </a>
-          <a className="item" onClick={this.newestClicked.bind(this)}>
+          <a className={this.navBarClassNames[2]} onClick={this.skillClicked.bind(this)}>
             写作技巧
           </a>
         </div>

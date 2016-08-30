@@ -35,8 +35,7 @@ export const experts =
     description: "中国工程科学院院士，著有“我国核电仪控系统的自主化之路”等"
   }]
 
-export const companies =
-  [{
+export const companies = [{
     committee: "钱智民",
     title: "理事长",
     name: "中国核工业集团公司"
@@ -67,8 +66,27 @@ export const companies =
     name: "中国第二重型机械集团公司"
   }]
 
-export const notice =
-{
+export const conferences =
+  [{
+    name: "2016 年亚洲核工业技术管理论坛",
+    date: new Date(),
+    suburb: "海淀区",
+    address: "中国北京海淀区北大街 1899 号 8 楼"
+  },
+  {
+    name: "2017 年世界核工业技术高峰",
+    date: new Date("2017-01-05"),
+    suburb: "徐汇区",
+    address: "中国上海徐汇区南京路 67 号逸夫楼 3 层"
+  },
+  {
+    name: "2017 中美核技术交流年会",
+    date: new Date("2017-09-05"),
+    suburb: "San Jose",
+    address: "18 Mill St, San Jose, California USA"
+  }]
+
+export const notice = {
   text:
   `
   ## 中国核工业征稿
@@ -101,3 +119,82 @@ export const notice =
   1. 所有向《中国核工业》投递的作品无论是否发表，作者均依照《中华人民共和国著作权法》享有著作权。
   2. 所有向《中国核工业》投稿作品及其相关合作机构，享有使用权。`
 }
+
+export const magazines = [{
+  name: "中国核电"
+},{
+  name: "原子能科学技术"
+},{
+  name: "核技术"
+},{
+  name: "核电子学与探测技术"
+},{
+  name: "核化学与放射化学"
+},{
+  name: "核科技进展"
+},{
+  name: "铀矿冶"
+},{
+  name: "核技术"
+},{
+  name: "核科学与工程"
+},{
+  name: "核动力工程"
+},{
+  name: "辐射防护"
+},{
+  name: "强激光与粒子束"
+},{
+  name: "核聚变与等离子物理"
+},{
+  name: "同位素"
+},{
+  name: "核标准计量与质量"
+},{
+  name: "中国核工业"
+}]
+
+export const strategies = [
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'},
+  {title: '如何做那万绿葱葱中的一点红!'} ]
+
+export const skills = [
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'},
+  {title: '拯救你溺水的标题!'} ]
+
+export const latestArticles = [
+  {authors: ["吴炳晨"], title: "核电厂外电源系统保护带负荷试验替补方法研究"},
+  {authors: ["徐智", "鲍麒"], title: "潜在通路分析技术在AP1000核电厂主回路设计中的应用"},
+  {authors: ["吴炳晨"], title: "核电厂外电源系统保护带负荷试验替补方法研究"},
+  {authors: ["徐智", "鲍麒"], title: "潜在通路分析技术在AP1000核电厂主回路设计中的应用"},
+  {authors: ["吴炳晨"], title: "核电厂外电源系统保护带负荷试验替补方法研究"},
+  {authors: ["徐智", "鲍麒"], title: "潜在通路分析技术在AP1000核电厂主回路设计中的应用"}
+]
