@@ -6,7 +6,7 @@ import Home from './components/home.jsx';
 import Experts from './components/experts.jsx';
 import {Admin_CoCompaniesContainer} from '../core/containers/co_companies';
 import Contact from './containers/contact';
-import {Admin_NoticeContainer} from '../core/containers/notice';
+import Notice from './containers/notice';
 import Conferences from './containers/conferences';
 import Menu from './containers/menu';
 
@@ -34,6 +34,6 @@ export default function (injectDeps, {FlowRouter}) {
   router('experts', <Experts />, PcLayoutCtx)
   router('companies', <Admin_CoCompaniesContainer />, PcLayoutCtx)
   router('conferences', <Conferences />, PcLayoutCtx)
-  router('notice', <Admin_NoticeContainer />, PcLayoutCtx)
+  router('notice', <Notice />, PcLayoutCtx)
   router('contact', <Contact />, PcLayoutCtx)
 }

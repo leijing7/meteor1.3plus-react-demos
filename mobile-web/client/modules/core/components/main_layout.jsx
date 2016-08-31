@@ -34,3 +34,11 @@ export const JournalLayout = ({content = () => null }) => {
     </div>
   )
 };
+
+export const PostLayout = ({content = () => null }) => {
+  return(
+    <div>
+      {content()}
+    </div>
+  )
+};

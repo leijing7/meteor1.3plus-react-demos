@@ -13,21 +13,30 @@ const MagazineList = () =>
     }
   </div>
 
-const Titles = ({title}) =>
-  <div style={{paddingTop: 10, paddingLeft: 10, paddingRight: 15}}>
-    <p style={{fontSize: '1.15em'}}> &nbsp; <strong>&#9670; </strong> {title} </p>
-    <div className="ui fitted divider"/>
-  </div>
+class Titles extends React.Component {
+  itemClicked(){
+    const param = FlowRouter.getQueryParam('item')
+    FlowRouter.go(`/p/${this.props.id}?item=${param}`)
+  }
+  render() {
+    return (
+      <div style={{paddingTop: 20, paddingLeft: 10, paddingRight: 10}} onClick={this.itemClicked.bind(this)}>
+        <p style={{fontSize: '1.15em'}}>&nbsp; <span style={{fontSize: '0.65em'}}>&#9670;</span>  {this.props.title} </p>
+        <div className="ui fitted divider"/>
+      </div>
+    )
+  }
+}
 
 const Journals = () => {
   const activeItem = FlowRouter.getQueryParam('item')
   let content = <MagazineList />
   switch (activeItem) {
     case 'strategy':
-      content = strategies.map( (s, idx) => <Titles title={s.title} key={idx} />)
+      content = strategies.map( (s, idx) => <Titles title={s.title} key={idx} id={'asdfsd'}/>)
       break;
     case 'skill':
-      content = skills.map( (s, idx) => <Titles title={s.title} key={idx} />)
+      content = skills.map( (s, idx) => <Titles title={s.title} key={idx} id={'asdfsd'}/>)
       break;
   }
   return (

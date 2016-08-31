@@ -10,3 +10,4 @@ import co_companies from './co_companies';
 import conferences from './conferences';
 import experts from './experts';
 import notice from './notice';
+import post from './post';

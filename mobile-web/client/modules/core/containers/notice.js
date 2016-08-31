@@ -1,8 +1,7 @@
 import {useDeps, composeAll, composeWithTracker, compose} from 'mantra-core';
+import Notice from '../components/notice.jsx';
 
-import mobile_Notice from '../components/notice.jsx';
-import admin_Notice from '../../admin/components/notice.jsx';
-
+// share this composer with admin modules
 export const composer = ({context}, onData) => {
   const {Meteor, Collections} = context();
   if (Meteor.subscribe('notice').ready()) {
@@ -13,25 +12,11 @@ export const composer = ({context}, onData) => {
   }
 };
 
-///////////////////
-
-export const mobile_depsMapper = (context) => ({
+export const depsMapper = (context) => ({
   context: () => context
 });
 
-export const Mobile_NoticeContainer = composeAll(
+export default composeAll(
   composeWithTracker(composer),
-  useDeps(mobile_depsMapper)
-)(mobile_Notice);
-
-////////////////
-
-export const admin_depsMapper = (context, actions) => ({
-  save: actions.notice.save,
-  context: () => context
-});
-
-export const Admin_NoticeContainer = composeAll(
-  composeWithTracker(composer),
-  useDeps(admin_depsMapper)
-)(admin_Notice);
+  useDeps(depsMapper)
+)(Notice);

@@ -3,7 +3,7 @@ import marked from 'marked'
 
 const listStyle = {
   listStylePosition: 'inside',
-  padding: 5
+  padding: 10
 }
 
 const Notice = ({text}) => (
