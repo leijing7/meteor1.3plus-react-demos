@@ -7,3 +7,7 @@ import article_status from './article_status';
 import payment from './payment';
 import contact from './contact';
 import cooperation from './cooperation';
+import company from './company';
+import conferences from './conferences';
+import experts from './experts';
+import expert from './expert';

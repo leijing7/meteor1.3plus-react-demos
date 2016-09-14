@@ -11,6 +11,10 @@ import ArticleStatus from './components/article_status';
 import Payment from './components/payment';
 import Contact from './containers/contact';
 import Cooperation from './components/cooperation';
+import Company from './components/company';
+import Conferences from './components/conferences';
+import Experts from './components/experts';
+import Expert from './components/expert';
 
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
@@ -40,5 +44,9 @@ export default function (injectDeps, {FlowRouter}) {
   router('pay', <Payment />, MainLayoutCtx)
   router('contact', <Contact />, MainLayoutCtx)
   router('co', <Cooperation />, MainLayoutCtx)
+  router('company', <Company />, MainLayoutCtx)
+  router('conf', <Conferences />, MainLayoutCtx)
+  router('experts', <Experts />, MainLayoutCtx)
+  router('expert', <Expert />, MainLayoutCtx)
 
 }

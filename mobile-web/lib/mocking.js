@@ -70,19 +70,19 @@ export const conferences =
   [{
     name: "2016 年亚洲核工业技术管理论坛",
     date: new Date(),
-    suburb: "海淀区",
+    suburb: "北京海淀区",
     address: "中国北京海淀区北大街 1899 号 8 楼"
   },
   {
     name: "2017 年世界核工业技术高峰",
     date: new Date("2017-01-05"),
-    suburb: "徐汇区",
+    suburb: "上海徐汇区",
     address: "中国上海徐汇区南京路 67 号逸夫楼 3 层"
   },
   {
     name: "2017 中美核技术交流年会",
     date: new Date("2017-09-05"),
-    suburb: "San Jose",
+    suburb: "San Jose, CA",
     address: "18 Mill St, San Jose, California USA"
   }]
 

@@ -24,7 +24,7 @@ const Cooperation = () => {
   return (
     <div>
       <div className="ui equal width center aligned internally celled grid">
-        <div className="row" style={gridStyle} onClick={()=>FlowRouter.go('/w/atom')}>
+        <div className="row" style={gridStyle} onClick={()=>FlowRouter.go('/w/committee')}>
           <div style={{fontSize: '3.5em', color: Color.textColor}}>
             理事会
           </div>
@@ -34,7 +34,7 @@ const Cooperation = () => {
             广告
           </div>
         </div>
-        <div className="row" style={gridStyle} onClick={()=>FlowRouter.go('/w/atom')}>
+        <div className="row" style={gridStyle} onClick={()=>FlowRouter.go('/w/committee')}>
           <div style={{fontSize: '3.5em', color: Color.textColor}}>
             供应商
           </div>

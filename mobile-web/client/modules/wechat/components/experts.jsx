@@ -35,7 +35,7 @@ class Grid extends React.Component {
   }
 }
 
-const Grids = () => {
+const Experts = () => {
   const w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
   const h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
   const titleH = h - w
@@ -62,7 +62,7 @@ const Grids = () => {
   return (
     <div>
       <div style={titleStyle}>
-        新闻/广告
+        采访/广告
       </div>
       <div className="ui equal width center aligned internally celled grid">
         <Row arr={[1,2,3,4]} style={gridStyle}/>
@@ -74,4 +74,4 @@ const Grids = () => {
   )
 }
 
-export default Grids;
+export default Experts;
