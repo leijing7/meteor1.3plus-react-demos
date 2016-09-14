@@ -1,10 +1,9 @@
 import React from 'react';
-import JournalFootBar from './journal_foot_bar';
 import {Color} from '/lib/util';
-import ArticleNavBar from './article_nav_bar';
 
-const EditorContact = ({name, phone, mobile, wechat, email, address, comment}) =>
+const Contact = ({name, phone, mobile, wechat, email, address, comment}) =>
   <div>
+    <img src="/imgs/mag.png" width="100%"/>
     <div className="weui_cells_title">小编的联系方式</div>
     <div className="weui_cells">
       <div className="weui_cell">
@@ -65,8 +64,6 @@ const EditorContact = ({name, phone, mobile, wechat, email, address, comment}) =
       </div>
     </div>
     <div style={{padding:10}}>{comment}</div>
-
-    <JournalFootBar item={'contact'}/>
   </div>
 
-export default EditorContact;
+export default Contact;

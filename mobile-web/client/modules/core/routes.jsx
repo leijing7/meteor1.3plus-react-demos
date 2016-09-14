@@ -30,14 +30,14 @@ export default function (injectDeps, {FlowRouter}) {
     }
   }
 
-  const routerHome = router('home', <Home />, MainLayoutCtx)
-  routerHome['triggersEnter'] =
+  const routerAdminHome = router('home', <Home />, MainLayoutCtx)
+  routerAdminHome['triggersEnter'] =
     [function(context, redirect) { //if is pc, go to the admin site
       if (!Util.isMobileDevice()) {
         redirect('/admin/home');
       }
     }]
-  FlowRouter.route('/', routerHome);
+  FlowRouter.route('/', routerAdminHome);
   FlowRouter.route('/experts', router('experts', <Experts />, MainLayoutCtx));
   FlowRouter.route('/co', router('cooperation', <Mobile_CoCompaniesContainer />, MainLayoutCtx));
   FlowRouter.route('/conf', router('conferences', <Conferences />, MainLayoutCtx));

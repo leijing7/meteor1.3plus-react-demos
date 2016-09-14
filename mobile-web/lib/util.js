@@ -9,7 +9,9 @@ export const Color = {
   menuBgGray: '#353644',
   darkSpaceGray: '#323238',
 
-  primary: '#810707'
+  primary: '#810707',
+
+  textColor: '#FF5F49'
 }
 
 const isMobileDevice = () => /(iphone|ipod|ipad|android)/gi.test(navigator.userAgent);

@@ -6,7 +6,7 @@
 
 1. 安装 Meteor 1.3+
 1. git clone 或者下载该例子
-2. 在程序的目录运行 meteor npm install 命名，安装 npm 包
+2. 在程序的目录运行 meteor npm install 命名安装 npm 包
 
 ### 运行
 
