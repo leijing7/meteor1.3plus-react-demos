@@ -13,10 +13,11 @@ const Titles = ({title, authors}) =>
 
 class Search extends React.Component {
   searchBtnClicked(){
+    const title  = this.refs.title.value
     const author = this.refs.author.value
     const serial = this.refs.serial.value
-    if (!author && !serial) {
-      alert("第一作者或文章标号至少填写一项");
+    if (!title && !author && !serial) {
+      alert("文章题目、第一作者或文章标号至少填写一项");
       return
     }
     console.log(author, serial);
@@ -28,7 +29,7 @@ class Search extends React.Component {
           <div className="weui_cell">
             <div className="weui_cell_hd"><label className="weui_label">文章题目</label></div>
              <div className="weui_cell_bd weui_cell_primary">
-                <input className="weui_input" ref="author" placeholder="请输入"/>
+                <input className="weui_input" ref="title" placeholder="请输入"/>
              </div>
           </div>
           <div className="weui_cell">

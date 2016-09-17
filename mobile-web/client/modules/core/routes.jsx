@@ -32,9 +32,12 @@ export default function (injectDeps, {FlowRouter}) {
 
   const routerAdminHome = router('home', <Home />, MainLayoutCtx)
   routerAdminHome['triggersEnter'] =
-    [function(context, redirect) { //if is pc, go to the admin site
+    [function(context, redirect) {
+      //if is pc, go to the admin site; otherwise go to wechat pages
       if (!Util.isMobileDevice()) {
         redirect('/admin/home');
+      } else {
+        redirect('/w/home');
       }
     }]
   FlowRouter.route('/', routerAdminHome);

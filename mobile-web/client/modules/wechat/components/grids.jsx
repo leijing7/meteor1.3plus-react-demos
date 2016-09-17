@@ -11,7 +11,8 @@ const Row = ({arr, style}) =>
 
 class Grid extends React.Component {
   clicked(){
-    $(`#shapeId${this.props.val}`).shape('flip over');
+    // $(`#shapeId${this.props.val}`).shape('flip over');
+    FlowRouter.go('/w/company')
   }
   render(){
     return (

@@ -53,7 +53,7 @@ const Home = () => {
         </div>
         <div className="row">
           <div className="column" style={gridStyle}>
-            <div>
+            <div onClick={()=>FlowRouter.go('/w/conf')}>
               <i className="huge list icon" style={iconStyle}/>
               <br />
               <br />
@@ -61,7 +61,7 @@ const Home = () => {
             </div>
           </div>
           <div className="column" style={gridStyle}>
-            <div>
+            <div onClick={()=>FlowRouter.go('/w/experts')}>
               <i className="huge student icon" style={iconStyle}/>
               <br />
               <br />

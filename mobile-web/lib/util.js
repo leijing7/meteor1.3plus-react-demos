@@ -16,6 +16,8 @@ export const Color = {
 
 const isMobileDevice = () => /(iphone|ipod|ipad|android)/gi.test(navigator.userAgent);
 
+export const genRandomInRange = (low, high) => Math.round(Math.random() * (high - low) + low)
+
 export default {
   isMobileDevice
 }

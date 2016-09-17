@@ -35,18 +35,35 @@ export default function (injectDeps, {FlowRouter}) {
     });
   }
 
+ //主页
   router('home', <Home />, MainLayoutCtx)
+
+// 我要投稿
   router('submission', <Submission />, MainLayoutCtx)
-  router('atom', <Atom />, MainLayoutCtx)
-  router('committee', <Grids />, MainLayoutCtx)
-  router('notice', <Notice />, MainLayoutCtx)
-  router('status', <ArticleStatus />, MainLayoutCtx)
-  router('pay', <Payment />, MainLayoutCtx)
-  router('contact', <Contact />, MainLayoutCtx)
+  // 投稿启事，稿件状态等
+    router('atom', <Atom />, MainLayoutCtx)
+    // 投稿启事
+      router('notice', <Notice />, MainLayoutCtx)
+    // 文章查询
+      router('status', <ArticleStatus />, MainLayoutCtx)
+    // 付费信息
+      router('pay', <Payment />, MainLayoutCtx)
+    // 联系
+      router('contact', <Contact />, MainLayoutCtx)
+
+// 合作企业
   router('co', <Cooperation />, MainLayoutCtx)
-  router('company', <Company />, MainLayoutCtx)
+  //16 grids
+    router('committee', <Grids />, MainLayoutCtx)
+    // 公司信息
+      router('company', <Company />, MainLayoutCtx)
+
+// 行业会议
   router('conf', <Conferences />, MainLayoutCtx)
+
+// 核电专家
   router('experts', <Experts />, MainLayoutCtx)
-  router('expert', <Expert />, MainLayoutCtx)
+  //专家信息
+    router('expert', <Expert />, MainLayoutCtx)
 
 }
