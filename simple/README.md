@@ -1,4 +1,4 @@
-## Meteor + React reactive programming 响应式编程理解
+## Meteor + React reactive programming 反应式编程理解
 
 这个简单的例子是让大家理解 Meteor 和 React 配合进行响应式编程的概念。基于 Meteor 1.3+
 

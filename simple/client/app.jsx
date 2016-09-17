@@ -24,7 +24,7 @@ export default class App extends Component {
     return (
       <div>
         <header>
-          <h1>Click below button to try reactive programming 相应式编程</h1>
+          <h1>Click below button to try reactive programming 反应式编程</h1>
         </header>
 
         <button onClick={this.btnClicked.bind(this)}> Click </button>
