@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {latestArticles} from '/lib/mocking';
+import {latestArticles, apiLinks} from '/lib/mocking';
 
 const Titles = ({title, authors}) =>
   <div style={{paddingTop: 15, paddingLeft: 10, paddingRight: 10}}>
@@ -25,33 +25,15 @@ class Search extends React.Component {
   render(){
     return(
       <div>
-        <div className="weui_cells">
-          <div className="weui_cell">
-            <div className="weui_cell_hd"><label className="weui_label">文章题目</label></div>
-             <div className="weui_cell_bd weui_cell_primary">
-                <input className="weui_input" ref="title" placeholder="请输入"/>
-             </div>
-          </div>
-          <div className="weui_cell">
-            <div className="weui_cell_hd"><label className="weui_label">第一作者</label></div>
-             <div className="weui_cell_bd weui_cell_primary">
-                <input className="weui_input" ref="author" placeholder="请输入"/>
-             </div>
-          </div>
-          <div className="weui_cell">
-            <div className="weui_cell_hd"><label className="weui_label">文章编号</label></div>
-             <div className="weui_cell_bd weui_cell_primary">
-              <input className="weui_input" ref="serial" placeholder="请输入"/>
-             </div>
-          </div>
+        <div style={{padding: 50}}>
+          <a className="weui_btn weui_btn_plain_primary" href="javascript:" id="showTooltips" href={apiLinks.current}>本期目次</a>
         </div>
-
-        <div className="weui_btn_area">
-          <a className="weui_btn weui_btn_primary" href="javascript:" id="showTooltips" onClick={this.searchBtnClicked.bind(this)}>查询</a>
+        <div style={{padding: 50}}>
+          <a className="weui_btn weui_btn_plain_primary" href="javascript:" id="showTooltips" href={apiLinks.search}>稿件查询</a>
         </div>
-        <h4 className="ui horizontal divider header">
-          最近查询
-        </h4>
+        <div style={{padding: 50}}>
+          <a className="weui_btn weui_btn_plain_primary" href="javascript:" id="showTooltips" href={apiLinks.past}>过刊浏览</a>
+        </div>
       </div>
     )
   }
@@ -67,9 +49,13 @@ class ArticleStatus extends React.Component {
     if (FlowRouter.getQueryParam("item") === "latest") {
       content = latestArticles.map( (a, idx) => <Titles {...a} key={idx}/> )
     }
+    const imgStyle = {
+      borderTop: 'solid #f49a9a',
+      borderBottom:'solid #f49a9a'
+    }
     return (
       <div>
-        <img src="/imgs/mag.png" width="100%"/>
+        <img src="/imgs/zghd.png" width="100%" style={imgStyle}/>
         {content}
       </div>
     );
@@ -77,3 +63,32 @@ class ArticleStatus extends React.Component {
 }
 
 export default ArticleStatus;
+
+
+// <div className="weui_cells">
+//   <div className="weui_cell">
+//     <div className="weui_cell_hd"><label className="weui_label">文章题目</label></div>
+//      <div className="weui_cell_bd weui_cell_primary">
+//         <input className="weui_input" ref="title" placeholder="请输入"/>
+//      </div>
+//   </div>
+//   <div className="weui_cell">
+//     <div className="weui_cell_hd"><label className="weui_label">第一作者</label></div>
+//      <div className="weui_cell_bd weui_cell_primary">
+//         <input className="weui_input" ref="author" placeholder="请输入"/>
+//      </div>
+//   </div>
+//   <div className="weui_cell">
+//     <div className="weui_cell_hd"><label className="weui_label">文章编号</label></div>
+//      <div className="weui_cell_bd weui_cell_primary">
+//       <input className="weui_input" ref="serial" placeholder="请输入"/>
+//      </div>
+//   </div>
+// </div>
+//
+// <div className="weui_btn_area">
+//   <a className="weui_btn weui_btn_primary" href="javascript:" id="showTooltips" onClick={this.searchBtnClicked.bind(this)}>查询</a>
+// </div>
+// <h4 className="ui horizontal divider header">
+//   最近查询
+// </h4>

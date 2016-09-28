@@ -68,9 +68,13 @@ class Expert extends React.Component {
     if (FlowRouter.getQueryParam("item") === "latest") {
       content = latestArticles.map( (a, idx) => <Titles {...a} key={idx}/> )
     }
+    const imgStyle = {
+      borderTop: 'solid #f49a9a',
+      borderBottom:'solid #f49a9a'
+    }
     return (
       <div>
-        <img src="/imgs/mag.png" width="100%"/>
+        <img src="/imgs/zghd.png" width="100%" style={imgStyle}/>
         <h2 style={{padding: 10}}>{experts[0].name}</h2>
         <hr/>
         <h3 style={{color: 'red', paddingLeft: 10}}>生平简介</h3>

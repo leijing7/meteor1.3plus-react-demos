@@ -7,9 +7,13 @@ const listStyle = {
 }
 
 const Payment = () => {
+  const imgStyle = {
+    borderTop: 'solid #f49a9a',
+    borderBottom:'solid #f49a9a'
+  }
   return(
     <div>
-      <img src="/imgs/mag.png" width="100%"/>
+      <img src="/imgs/zghd.png" width="100%" style={imgStyle}/>
 
       <div className="weui_cells_title">
         <span style={{color: 'red', fontSize: '1.2em'}}>微信支付</span>

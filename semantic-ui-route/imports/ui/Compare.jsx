@@ -16,7 +16,7 @@ export default class PriceTable extends React.Component {
           <input type="number" placeholder="预测到目的地里程" ref="distInput" />
           <button className="ui orange right labeled icon button" onClick={()=>this.btnClicked()}>
             比较
-            <i className="car icon"></i>
+            <i className="car icon" />
           </button>
         </div>
       </div>

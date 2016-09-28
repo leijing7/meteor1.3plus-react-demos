@@ -1,9 +1,14 @@
 import React from 'react';
 import {Color} from '/lib/util';
 
+const imgStyle = {
+  borderTop: 'solid #f49a9a',
+  borderBottom:'solid #f49a9a'
+}
+
 const Contact = ({name, phone, mobile, wechat, email, address, comment}) =>
   <div>
-    <img src="/imgs/mag.png" width="100%"/>
+    <img src="/imgs/zghd.png" width="100%" style={imgStyle}/>
     <div className="weui_cells_title">小编的联系方式</div>
     <div className="weui_cells">
       <div className="weui_cell">

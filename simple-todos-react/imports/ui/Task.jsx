@@ -24,7 +24,14 @@ export default class Task extends Component {
       checked: this.props.task.checked,
       private: this.props.task.private,
     });
-
+    console.log(this.props.task._id.valueOf().length, 888);
+    let timestamp = 'na'
+    // if (this.props.task._id.hasOwnProperty('getTimestamp')) {
+    if (typeof(this.props.task._id) != 'string') {
+      console.log(this.props.task._id, 666);
+      timestamp = this.props.task._id.getTimestamp()
+      console.log(timestamp, new Date(timestamp*1000), new Date().getTime(), new Date(1474868810929));
+    }
     return (
       <li className={taskClassName} onClick={this.props.itemClicked.bind(this, this.props.task.text)}>
         <button className="delete" onClick={this.deleteThisTask.bind(this)}>
@@ -46,6 +53,8 @@ export default class Task extends Component {
 
         <span className="text">
           <strong>{this.props.task.username}</strong>: {this.props.task.text}
+          <span style={{color: 'red'}} > {this.props.task._id.valueOf()} </span>
+          <span style={{color: 'blue'}} > {timestamp} </span>
         </span>
       </li>
     );

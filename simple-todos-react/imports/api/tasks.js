@@ -45,10 +45,18 @@ Meteor.methods({
 // 但是最终 3 秒后还是出现在了任务列表
     if (Meteor.isServer) {
       //Meteor._sleepForMs(2000)
-      insertTask()
+      //insertTask()
+      const id = new Mongo.ObjectID()
+      newTask._id = id
+      Tasks.insert(newTask)
     }
     if (Meteor.isClient) {
-      insertTask()
+      const id = new Mongo.ObjectID()
+      console.log(id.getTimestamp());
+      console.log(new Date().valueOf());
+      newTask._id = id._str
+      Tasks.insert(newTask)
+      //insertTask()
     }
   },
   'tasks.remove'(taskId) {

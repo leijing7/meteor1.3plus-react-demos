@@ -343,3 +343,9 @@ def hello():
 如果需要在正文里使用特殊字符的话，可以用 \`\` 来转义
 最后虽然 GFW 支持 Html 标签，不过本次项目中不允许在 MarkDown 中插入 Html 标签
 `
+
+export const apiLinks = {
+  current: "http://zghd.cbpt.cnki.net/wkd/WapPublication/cuurentIssuePaper.aspx", //本期目次
+  search: "http://zghd.cbpt.cnki.net/EditorDN/Mobile/PaperSearch.aspx", //稿件查询
+  past: "http://zghd.cbpt.cnki.net/wkd/WapPublication/pastIssue.aspx" //过刊浏览
+}

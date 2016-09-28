@@ -7,9 +7,13 @@ const listStyle = {
 }
 
 const Company = () => {
+  const imgStyle = {
+    borderTop: 'solid #f49a9a',
+    borderBottom:'solid #f49a9a'
+  }
   return(
     <div>
-      <img src="/imgs/mag.png" width="100%"/>
+      <img src="/imgs/zghd.png" width="100%" style={imgStyle}/>
 
       <div className="weui_cells_title">
         <span style={{fontSize: '1.2em'}}>中国核工业集团公司</span>

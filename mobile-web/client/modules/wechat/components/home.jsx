@@ -29,14 +29,7 @@ const Home = () => {
     <div>
       <div className="ui equal width center aligned internally celled grid">
         <div className="row">
-          <div className="column" style={gridStyle}>
-            <div onClick={()=>FlowRouter.go('/w/submission')}>
-              <i className="huge send icon" style={iconStyle}/>
-              <br />
-              <br />
-              <span style={textStyle}>我要投稿</span>
-            </div>
-          </div>
+
           <div className="column" style={gridStyle}>
             <div onClick={()=>FlowRouter.go('/w/co')}>
               <i className="huge users icon" style={iconStyle}/>
@@ -45,21 +38,7 @@ const Home = () => {
               <span style={textStyle}>企业合作</span>
             </div>
           </div>
-        </div>
-        <div className="row" style={adStyle}>
-          <div style={{fontSize: '5em'}}>
-            广告
-          </div>
-        </div>
-        <div className="row">
-          <div className="column" style={gridStyle}>
-            <div onClick={()=>FlowRouter.go('/w/conf')}>
-              <i className="huge list icon" style={iconStyle}/>
-              <br />
-              <br />
-              <span style={textStyle}>行业会议</span>
-            </div>
-          </div>
+
           <div className="column" style={gridStyle}>
             <div onClick={()=>FlowRouter.go('/w/experts')}>
               <i className="huge student icon" style={iconStyle}/>
@@ -68,6 +47,36 @@ const Home = () => {
               <span style={textStyle}>核电专家</span>
             </div>
           </div>
+        </div>
+
+        <div className="row" style={adStyle}>
+          <div style={{fontSize: '5em'}}>
+            广告
+          </div>
+        </div>
+        
+        <div className="row">
+
+          <div className="column" style={gridStyle}>
+            <div onClick={()=>FlowRouter.go('/w/conf')}>
+              <i className="huge list icon" style={iconStyle}/>
+              <br />
+              <br />
+              <span style={textStyle}>行业会议</span>
+            </div>
+          </div>
+
+
+
+          <div className="column" style={gridStyle}>
+            <div onClick={()=>FlowRouter.go('/w/submission')}>
+              <i className="huge send icon" style={iconStyle}/>
+              <br />
+              <br />
+              <span style={textStyle}>我要投稿</span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
