@@ -37,7 +37,7 @@ export default function (injectDeps, {FlowRouter}) {
       if (!Util.isMobileDevice()) {
         redirect('/admin/home');
       } else {
-        redirect('/w/home');
+        // redirect('/w/home');
       }
     }]
   FlowRouter.route('/', routerAdminHome);

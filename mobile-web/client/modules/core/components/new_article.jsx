@@ -29,13 +29,13 @@ class Search extends React.Component {
 
           <div className="weui_cells">
             <div className="weui_cell">
-              <div className="weui_cell_hd"><label className="weui_label">第一作者</label></div>
+              <div className="weui_cell__hd"><label className="weui_label">第一作者</label></div>
                <div className="weui_cell_bd weui_cell_primary">
                   <input className="weui_input" ref="author" placeholder="请输入"/>
                </div>
             </div>
             <div className="weui_cell">
-              <div className="weui_cell_hd"><label className="weui_label">文章标号</label></div>
+              <div className="weui_cell__hd"><label className="weui_label">文章标号</label></div>
                <div className="weui_cell_bd weui_cell_primary">
                 <input className="weui_input" ref="serial" placeholder="请输入"/>
                </div>

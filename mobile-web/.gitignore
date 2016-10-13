@@ -1,5 +1,5 @@
 node_modules
 settings-dev.json
 settings-staging.json
-deploy.sh
+build2deploy.sh
 deploy-build.sh

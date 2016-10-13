@@ -9,7 +9,7 @@
 ```
 meteor npm i --save weui
 ```
-然后在你要使用 weui 的组件里 引入
+然后在你要使用 weui 的组件里 引入 (css 只需要引入一次，然后可以全局使用)
 
 ```
 import 'weui/dist/style/weui.min.css';

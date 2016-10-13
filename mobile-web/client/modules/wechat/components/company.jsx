@@ -24,7 +24,7 @@ const Company = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 公司性质 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -32,7 +32,7 @@ const Company = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 成立时间 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -40,7 +40,7 @@ const Company = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 经营范围 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -48,7 +48,7 @@ const Company = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 员工人数 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -56,7 +56,7 @@ const Company = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 公共邮箱 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -64,7 +64,7 @@ const Company = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 通讯地址 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -72,7 +72,7 @@ const Company = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 公司官网 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>

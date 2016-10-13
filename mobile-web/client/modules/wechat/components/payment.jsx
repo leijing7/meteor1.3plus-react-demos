@@ -24,7 +24,7 @@ const Payment = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> &nbsp; </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -32,7 +32,7 @@ const Payment = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> &nbsp; </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -40,7 +40,7 @@ const Payment = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> &nbsp; </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -56,7 +56,7 @@ const Payment = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 户 名 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -64,7 +64,7 @@ const Payment = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 开户行 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -72,7 +72,7 @@ const Payment = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 行 号 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>
@@ -80,7 +80,7 @@ const Payment = () => {
           <div className="weui_cell_bd weui_cell_primary">
             <p> 账 号 </p>
           </div>
-          <div className="weui_cell_ft">
+          <div className="weui_cell__ft">
             {}
           </div>
         </div>

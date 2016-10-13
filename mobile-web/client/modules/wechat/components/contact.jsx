@@ -15,7 +15,7 @@ const Contact = ({name, phone, mobile, wechat, email, address, comment}) =>
         <div className="weui_cell_bd weui_cell_primary">
           <p><i className="blue user icon"/> 称呼 </p>
         </div>
-        <div className="weui_cell_ft">
+        <div className="weui_cell__ft">
           {name}
         </div>
       </div>
@@ -25,7 +25,7 @@ const Contact = ({name, phone, mobile, wechat, email, address, comment}) =>
         <div className="weui_cell_bd weui_cell_primary">
           <p><i className="call icon"/> 电话 </p>
         </div>
-        <div className="weui_cell_ft">
+        <div className="weui_cell__ft">
           {phone}
         </div>
       </div>
@@ -33,7 +33,7 @@ const Contact = ({name, phone, mobile, wechat, email, address, comment}) =>
         <div className="weui_cell_bd weui_cell_primary">
           <p><i className="mobile icon"/> 手机 </p>
         </div>
-        <div className="weui_cell_ft">
+        <div className="weui_cell__ft">
           {mobile}
         </div>
       </div>
@@ -44,7 +44,7 @@ const Contact = ({name, phone, mobile, wechat, email, address, comment}) =>
         <div className="weui_cell_bd weui_cell_primary">
           <p><i className="green wechat icon"/> 微信 </p>
         </div>
-        <div className="weui_cell_ft">
+        <div className="weui_cell__ft">
           {wechat}
         </div>
       </div>
@@ -52,7 +52,7 @@ const Contact = ({name, phone, mobile, wechat, email, address, comment}) =>
         <div className="weui_cell_bd weui_cell_primary">
           <p><i className="mail icon"/> 邮箱 </p>
         </div>
-        <div className="weui_cell_ft">
+        <div className="weui_cell__ft">
           {email}
         </div>
       </div>
