@@ -6,6 +6,7 @@ import {Color} from '../lib/util';
 import coreModule from './modules/core';
 import adminModule from './modules/admin';
 import wechatModule from './modules/wechat';
+import v3Module from './modules/v3';
 
 Meteor.startup(function() {
   document.body.style.backgroundColor = Color.almostWhite
@@ -28,4 +29,5 @@ const app = createApp(context);
 app.loadModule(coreModule);
 app.loadModule(adminModule);
 app.loadModule(wechatModule);
+app.loadModule(v3Module);
 app.init();

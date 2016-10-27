@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {companies} from '/lib/mocking';
 
 const TableRow = ({committee, title, name}) =>

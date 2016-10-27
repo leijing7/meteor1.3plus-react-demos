@@ -1,4 +1,4 @@
-import {Mongo} from 'meteor/mongo';
+// import {Mongo} from 'meteor/mongo';
 import {SimpleSchema} from 'meteor/aldeed:simple-schema';
 
 const Companies = new Mongo.Collection('companies');

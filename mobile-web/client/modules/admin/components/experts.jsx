@@ -1,4 +1,3 @@
-import React from 'react';
 import {experts} from '/lib/mocking';
 
 const ExpertTableRow = ({imgUrl, name, title, description}) =>

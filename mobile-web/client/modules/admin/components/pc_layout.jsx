@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 // 主要布局
 export const PcLayout = ({menu, content}) => (

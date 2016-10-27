@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {Color} from '/lib/util';
 
 const Menu = ({activeItem, username}) => {

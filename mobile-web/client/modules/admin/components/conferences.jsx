@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import {conferences} from '/lib/mocking';
 import moment from "moment"
 
