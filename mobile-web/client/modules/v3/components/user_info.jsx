@@ -10,19 +10,19 @@ const UserInfo = () => {
       <p style={{textAlign: 'center', paddingBottom: 15}}> User Name </p>
       <div className="ui divider"/>
         <div className="weui-cells">
-        <a className="weui-cell weui-cell_access" href="javascript:;">
+        <a className="weui-cell weui-cell_access" href="/v3/favj">
           <div className="weui-cell__bd">
             <p>期刊收藏</p>
           </div>
           <div className="weui-cell__ft"/>
         </a>
-        <a className="weui-cell weui-cell_access" href="javascript:;">
+        <a className="weui-cell weui-cell_access" href="/v3/favc">
           <div className="weui-cell__bd">
             <p>会议关注</p>
           </div>
           <div className="weui-cell__ft"/>
         </a>
-        <a className="weui-cell weui-cell_access" href="javascript:;">
+        <a className="weui-cell weui-cell_access" href="/v3/feedback">
           <div className="weui-cell__bd">
             <p>意见反馈</p>
           </div>

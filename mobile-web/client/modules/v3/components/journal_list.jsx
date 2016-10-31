@@ -46,46 +46,46 @@ const JournalList = () => {
         </div>
         <div className="weui-tab__panel">
 
-      <div className="weui-flex" onClick={()=>FlowRouter.go('/v3/journaldetail')}>
-        <div className="weui-flex__item" style={imgBoxStyle} />
-        <div className="weui-flex__item" style={contentBoxStyle}>
-          <div style={{padding: 5}}>
-            <h4>中国社会科学</h4>
-            <p>主办单位: 中国社会科学院</p>
-            <p>出版周期: 月刊</p>
-            <p>ISSN: 1002-4921</p>
+          <div className="weui-flex" onClick={()=>FlowRouter.go('/v3/journaldetail')}>
+            <div className="weui-flex__item" style={imgBoxStyle} />
+            <div className="weui-flex__item" style={contentBoxStyle}>
+              <div style={{padding: 5}}>
+                <h4>中国社会科学</h4>
+                <p>主办单位: 中国社会科学院</p>
+                <p>出版周期: 月刊</p>
+                <p>ISSN: 1002-4921</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div className="weui-flex" onClick={()=>FlowRouter.go('/v3/journaldetail')}>
-        <div className="weui-flex__item" style={imgBoxStyle}>
-          <div></div>
-        </div>
-        <div className="weui-flex__item" style={contentBoxStyle}>
-          <div style={{padding: 5}}>
-            <h4>种植与养殖</h4>
-            <p>主办单位: 中国社会科学院</p>
-            <p>出版周期: 月刊</p>
-            <p>ISSN: 1002-4921</p>
+          <div className="weui-flex" onClick={()=>FlowRouter.go('/v3/journaldetail')}>
+            <div className="weui-flex__item" style={imgBoxStyle}>
+              <div></div>
+            </div>
+            <div className="weui-flex__item" style={contentBoxStyle}>
+              <div style={{padding: 5}}>
+                <h4>种植与养殖</h4>
+                <p>主办单位: 中国社会科学院</p>
+                <p>出版周期: 月刊</p>
+                <p>ISSN: 1002-4921</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div className="weui-flex" onClick={()=>FlowRouter.go('/v3/journaldetail')}>
-        <div className="weui-flex__item" style={imgBoxStyle}>
-          <div></div>
-        </div>
-        <div className="weui-flex__item" style={contentBoxStyle}>
-          <div style={{padding: 5}}>
-            <h4>区域与城市经济</h4>
-            <p>主办单位: 中国社会科学院</p>
-            <p>出版周期: 月刊</p>
-            <p>ISSN: 1002-4921</p>
+          <div className="weui-flex" onClick={()=>FlowRouter.go('/v3/journaldetail')}>
+            <div className="weui-flex__item" style={imgBoxStyle}>
+              <div></div>
+            </div>
+            <div className="weui-flex__item" style={contentBoxStyle}>
+              <div style={{padding: 5}}>
+                <h4>区域与城市经济</h4>
+                <p>主办单位: 中国社会科学院</p>
+                <p>出版周期: 月刊</p>
+                <p>ISSN: 1002-4921</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-      </div>
       </div>
     </div>
   )

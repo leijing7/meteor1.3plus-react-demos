@@ -38,18 +38,18 @@ class Home extends React.Component {
               </div>
             </div>
             <div className="center aligned column">
-              <div className="ui segment" style={boxStyle}>
+              <div className="ui segment" style={boxStyle} onClick={()=>FlowRouter.go('/v3/companylist')}>
                 企业宣传
               </div>
             </div>
 
             <div className="center aligned column">
-              <div className="ui segment" style={boxStyle}>
+              <div className="ui segment" style={boxStyle} onClick={()=>FlowRouter.go('/v3/bookpub')}>
                 著作出版
               </div>
             </div>
             <div className="center aligned column">
-              <div className="ui segment" style={boxStyle}>
+              <div className="ui segment" style={boxStyle} onClick={()=>FlowRouter.go('/v3/userinfo')}>
                 个人中心
               </div>
             </div>

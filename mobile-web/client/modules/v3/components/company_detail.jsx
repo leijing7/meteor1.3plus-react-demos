@@ -39,7 +39,9 @@ class CompanyDetail extends React.Component {
         </div>
         <hr/>
         <div style={{paddingTop: 30}}>
-          <a href="javascript:;" className="weui-btn weui-btn_plain-default" style={{width: '40%'} }>申请入会</a>
+          <a href="/v3/companyapplication" className="weui-btn weui-btn_plain-default" style={{width: '40%', marginTop: 20}}>
+            申请入会
+          </a>
         </div>
       </div>
     );
