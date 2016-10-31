@@ -11,7 +11,7 @@ import v3Module from './modules/v3';
 Meteor.startup(function() {
   document.body.style.backgroundColor = Color.almostWhite
 
-  DocHead.setTitle("Mobile Web");
+  DocHead.setTitle("原子能出版社");
   const metaInfo = {
     name: "viewport",
     content: "width=device-width, initial-scale=1.0, maximum-scale=1.0"

@@ -1,5 +1,5 @@
 import React from 'react';
-import JournalNavbar from './journal_navbar'
+
 
 class BookPub extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class BookPub extends React.Component {
   render() {
     return (
       <div>
-        <JournalNavbar/>
+
         <div className="weui-cells__title">图书出版</div>
         <div className="weui-cells weui-cells_form">
           <div className="weui-cell">
