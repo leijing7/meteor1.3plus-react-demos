@@ -133,6 +133,18 @@ class App extends Component {
 
         <div style={{padding: 10}}>当前窗口宽度: {this.state.windowWidth}</div>
         <div style={{padding: 10}}>被点击的任务: {this.state.clickedTaskText}</div>
+
+        {
+          (() => { //使用箭头函数带入 this
+            const col = 'red'
+            switch (col) {
+              case "red":   return <p style={{color: "#FF0000"}}> red tag</p>
+              case "green": return "#00FF00";
+              case "blue":  return "#0000FF";
+              default:      return "#FFFFFF";
+            }
+          })()
+        }
       </div>
     );
   }
