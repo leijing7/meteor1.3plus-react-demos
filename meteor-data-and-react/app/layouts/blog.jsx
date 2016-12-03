@@ -4,11 +4,10 @@ import { composeWithTracker } from 'react-komposer';
 
 
 
-////////////////////
+//////////////////////demo1，simple onData
 // Create a component to display Time
 const Time = ({time}) => (<div>{time}</div>);
 
-//demo1，simple
 const composerFunction = (props, onData) => {
 	const handler = setInterval(() => {
   	const time = new Date().toString();
@@ -53,11 +52,7 @@ const composerFunction3 = (props, onData) => {
   	return onData(error);
   }
 
-	const now = () => (
-  	props.timestamp ?
-    Date.now() :
-    new Date().toString()
-  );
+	const now = () => props.timestamp ? Date.now() : new Date().toString()
 
 	const handler = setInterval(() => {
     const time = now();
@@ -87,6 +82,8 @@ const BlogLayout = ({content}) => (
     <h1> 我的博客 </h1>
     <UserInfo />
     {content}
+
+
     <hr style={{padding: 30}}/>
     onData demo1:
     <Clock1 />
