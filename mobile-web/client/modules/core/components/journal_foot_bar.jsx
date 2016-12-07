@@ -60,5 +60,3 @@ export default class JournalFootBar extends React.Component {
     );
   }
 }
-
-export default JournalFootBar;
